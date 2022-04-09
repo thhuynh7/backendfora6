@@ -50,7 +50,7 @@ passport.use(strategy);
 // Initialize passport middleware
 app.use(passport.initialize());
 //----------------------------------------------------------------------------------
-app.post('/api/login', (req, res) => {
+app.post('/api/user/login', (req, res) => {
   userService
     .checkUser(req.body)
     .then(user => {
